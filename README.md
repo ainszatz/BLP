@@ -226,6 +226,65 @@ Create new comment on existing post
 }
 ```
 
+### 2. GET /comments/:id
+Get specific comment
+
+**Response Format:**
+```json
+{
+    "id": 9,
+    "content": "tes komen 21",
+    "createdAt": "2025-01-10T06:35:49.428Z",
+    "updatedAt": "2025-01-10T06:35:49.428Z",
+    "post": {
+        "id": 35,
+        "title": "Tes Judul 5",
+        "content": "Tes Konten 5",
+        "authorId": 12,
+        "createdAt": "2025-01-10T04:24:49.395Z",
+        "updatedAt": "2025-01-10T04:24:49.395Z"
+    }
+}
+```
+
+### 3. PUT /comments/:id
+Update existing comment
+
+**Request Body:**
+```json
+{
+  "content": "Test Comment Update 1234"
+}
+```
+
+**Response Format:**
+```json
+{
+    "id": 9,
+    "content": "Test Comment Update 1234",
+    "createdAt": "2025-01-10T06:35:49.428Z",
+    "updatedAt": "2025-01-11T07:05:15.448Z",
+    "post": {
+        "id": 35,
+        "title": "Tes Judul 5",
+        "content": "Tes Konten 5",
+        "authorId": 12,
+        "createdAt": "2025-01-10T04:24:49.395Z",
+        "updatedAt": "2025-01-10T04:24:49.395Z"
+    }
+}
+```
+
+### 4. DELETE /comments/:id
+Delete existing comment
+
+**Response Format:**
+```json
+{
+    "message": "Comment deleted successfully."
+}
+```
+
 ## Project Setup
 ```bash
 $ npm install
